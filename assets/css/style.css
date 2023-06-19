@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    --pale-violet: hsl(276, 100%, 81%);
+    --light-violet: hsl(264, 100%, 61%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+}
+
+* {
+    box-sizing: border-box;
+    font: 400 16px 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-grayish-violet);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.illustration-model {
+    background-image: linear-gradient(40deg, var(--light-violet), var(--light-magenta));
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    border-radius: 0 0 100vh 0;
+    min-height: 560px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.container-main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.headline {
+    color: var(--very-dark-desaturated-violet);
+}
+
+.headline h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 24px 0;
+    text-align: center;
+}
+
+.headline p {
+    color: var(--dark-grayish-violet);
+    text-align: center;
+}
+
+@media (min-width: 1080px) {
+    .illustration-model {
+        background-size: 150% 150%;
+        border-radius: 0 0 250px 250px;
+        min-height: 620px;
+        max-width: 440px;
+    }
+    .container-main {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .headline {
+        margin-left: 8%;
+        width: 450px;
+    }
+    .headline h1, .headline p {
+        text-align: left;
+    }
+}
